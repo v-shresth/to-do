@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  db:
+    container_name: postgres
+    image: "postgres:13"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=local
+      - POSTGRES_PASSWORD=local
+      - POSTGRES_DB=to-do
