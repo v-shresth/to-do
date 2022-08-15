@@ -18,7 +18,7 @@ let authenticateToken = async (req, res, next) => {
                     req.id = payload.id;
                     next();
                 } else {
-                    res.sendStatus(404);
+                    res.sendStatus(401);
                 }
             })();
         } catch (error) {
